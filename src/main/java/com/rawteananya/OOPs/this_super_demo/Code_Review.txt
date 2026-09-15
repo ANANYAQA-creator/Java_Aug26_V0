@@ -1,0 +1,101 @@
+Phase 9.11 — Code Review
+1. Parent class
+public class Employee_Parent {
+✅ Correct.
+You created the parent class.
+
+String name = "Employee";
+String role = "QA Engineer";
+✅ These are instance variables of the parent class.
+
+2. Parent method
+public void displayRole(){
+    System.out.println("Parent Role : " + role);
+}
+✅ Correct.
+The method accesses the parent's role.
+
+3. Child class
+public class AutomationEngineer_Child extends Employee_Parent {
+
+🔥 Correct.
+
+This is also our first practical demonstration of inheritance:
+
+Employee_Parent
+      ↑
+      |
+AutomationEngineer_Child
+
+We'll study inheritance formally in 9.12.
+
+4. Child variable
+String role = "QA Automation Engineer";
+
+✅ Correct.
+
+Now both parent and child have a variable with the same name:
+
+Parent:
+role = "QA Engineer"
+
+Child:
+role = "QA Automation Engineer"
+
+Perfect setup for demonstrating this and super.
+
+5. this.role
+System.out.println("Child role : " + this.role);
+
+🔥 Exactly correct.
+
+this.role means:
+
+The role belonging to the current child object.
+
+Output:
+
+Child role : QA Automation Engineer
+6. super.role
+System.out.println("Parent role : " + super.role);
+
+🔥 Exactly correct.
+
+super.role means:
+
+Access the role variable from the immediate parent class.
+
+Output:
+
+Parent role : QA Engineer
+7. super.displayRole()
+super.displayRole();
+
+🔥 Perfect.
+
+This explicitly calls the parent class implementation of displayRole().
+
+Output:
+
+Parent Role : QA Engineer
+8. Object creation
+AutomationEngineer_Child obj =
+        new AutomationEngineer_Child();
+
+✅ Correct.
+
+You're creating an object of the child class.
+
+Then:
+
+obj.displayDetails();
+
+✅ Correct.
+
+🎯 Expected Output
+
+Your code produces:
+
+Child role : QA Automation Engineer
+Parent role : QA Engineer
+Parent Role : QA Engineer
