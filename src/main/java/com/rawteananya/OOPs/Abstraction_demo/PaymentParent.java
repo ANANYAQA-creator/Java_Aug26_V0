@@ -10,6 +10,6 @@ public abstract class PaymentParent {  //You used the abstract keyword properly.
 
     public void paymentStatus(){ //This proves that an abstract class can contain both abstract and concrete methods.
         //concrete method
-        System.out.println("Payment Status Checked");
+        System.out.println("Payment_interface Status Checked");
     }
 }
