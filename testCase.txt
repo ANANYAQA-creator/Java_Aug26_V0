@@ -1,0 +1,4 @@
+Login Test
+Payment Test
+Logout Test
+Transfer Test
