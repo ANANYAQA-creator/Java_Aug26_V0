@@ -1,0 +1,5 @@
+username=ananya
+password=Test@123
+browser=chrome
+environment=QA
+project=BFS
